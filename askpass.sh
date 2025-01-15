@@ -3,7 +3,7 @@
 
 # Requirements    : { md5sum, grep, cat, echo, tr, ffmpeg, ip, awk, read, cut, ps, iwlist, sleep, clear, trap,
 # 		      wc, chmod, ls, upower, pgrep, date, free, curl, mkdir git }
-# LOC		  : 680 
+# LOC		  : 619
 
 # Date of Start	  : 10 July 2024                 [ Ovaral idia and overal Password locking and Trap setup ]
 # Next Edit       : 9 Aug 2024, 1:58 AM     	 [ Function modulation and Message contents ] 
