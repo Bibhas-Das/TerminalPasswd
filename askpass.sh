@@ -1,9 +1,9 @@
-# Program         : Login to terminal Program    [ Shell Script sh/bash/zsh ]
-# Programmer Name : Bibhas Das			 [ MCA ]
+# Program         : Login to terminal Program    [ Shell Script sh/bash/zsh/fish ]
+# Programmer Name : Bibhas Das
 
 # Requirements    : { md5sum, grep, cat, echo, tr, ffmpeg, ip, awk, read, cut, ps, iwlist, sleep, clear, trap,
 # 		      wc, chmod, ls, upower, pgrep, date, free, curl, mkdir git }
-# LOC		  : 619
+# LOC		  : 680 
 
 # Date of Start	  : 10 July 2024                 [ Ovaral idia and overal Password locking and Trap setup ]
 # Next Edit       : 9 Aug 2024, 1:58 AM     	 [ Function modulation and Message contents ] 
@@ -582,8 +582,18 @@ create_password_hash_file()
 		do
 			ls -l /dev/disk/by-uuid/
 			d_list=$(ls -l /dev/disk/by-uuid/)
-			message "Type only the pendrive's name or 'r' for reload: "
+			message "Type only the pendrive's name (second last field)"
+			message "Or 'r' for reload or 's' for skip it: "
 			read ch
+			
+			if test "$ch" = "s"
+			then
+				debug "Skiping pendrive selection"
+				debug "dummy data inserted"
+				echo "" >> $p_hash
+				break
+			fi
+			
 			c=$(echo $d_list|grep " $ch ")
 			c=$(echo $c|wc -c)
 			debug "length of input pendrive : $c"
@@ -594,7 +604,7 @@ create_password_hash_file()
 				break
 			fi
 		done
-	message "Pendrive stick is added successfully" "green"
+	message "Pendrive stick selection completed" "green"
 	else
 		debug "dummy data inserted"
 		echo "" >> $p_hash
@@ -612,8 +622,18 @@ create_password_hash_file()
 			iwlist scan > /dev/null 2>&1
 			iwlist scan 2>/dev/null | grep -E "Address|ESSID"
 			w_list=$(iwlist scan 2>/dev/null | grep -E "Address|ESSID")
-			message "Just type the 17 chracter your trusted wifi's MAC address or r for reload : "
+			message "Just type the 17 chracter your trusted wifi's MAC address"
+			message "Or 'r' for reload or 's' for skip it: "
 			read w_mac
+			
+			if test "$w_mac" = "s"
+			then
+				debug "Skiping wifi selection"
+				debug "dummy data inserted"
+				echo "" >> $p_hash
+				break
+			fi
+			
 			ch=$(echo $w_list|grep " $w_mac ")
 			ch=$(echo $ch|wc -c)
 			
@@ -623,7 +643,7 @@ create_password_hash_file()
 				break
 			fi
 		done
-		message "Trusted wifi is added successfully" "green"
+		message "Trusted wifi selection completed" "green"
 	else
 		debug "dummy data inserted"
 		echo "" >> $p_hash
@@ -642,9 +662,18 @@ create_password_hash_file()
 			if test $(echo $connectedBluetooth|wc -c) -ge 17
 			then
 				message "$connectedBluetooth : Is it your device?(y/n) " "brown"
-				message "If not reload it with 'r': "
+				message "If not reload it with 'r' or 's' skip it: "
 			
 				read ch
+				
+				if test "$ch" = "s"
+				then
+					debug "Skiping wifi selection"
+					debug "dummy data inserted"
+					echo "" >> $p_hash
+					break
+				fi
+				
 				if test "$ch" = "y" -o "$ch" = 'Y'
 				then
 					connectedBluetoothHash=$(echo $connectedBluetooth|md5sum|cut -c 1-32)
@@ -656,14 +685,14 @@ create_password_hash_file()
 				sleep 5
 			fi
 		done
-		message "Trusted blutooth device is registered successfully" "green"
+		message "Trusted blutooth device selection completed" "green"
 	
 	else
 		debug "dummy data inserted"
 		echo "" >> $p_hash
 	fi
 	
-	debug "All password hashes are stored in a file"
+	debug "All password's hashes are stored in a file"
 	
 }
 
