@@ -2,13 +2,13 @@
 # Programmer Name : Bibhas Das			 [ MCA ]
 
 # Requirements    : { md5sum, grep, cat, echo, tr, ffmpeg, ip, awk, read, cut, ps, iwlist, sleep, clear, trap,
-# 		            wc, chmod, ls, upower, pgrep, date, free, curl, mkdir git }
-# LOC		      : 680 
+# 		      wc, chmod, ls, upower, pgrep, date, free, curl, mkdir git }
+# LOC		  : 680 
 
-# Date of Start	  : 10 July 2024         	     [ Ovaral idia and overal Password locking and Trap setup ]
+# Date of Start	  : 10 July 2024                 [ Ovaral idia and overal Password locking and Trap setup ]
 # Next Edit       : 9 Aug 2024, 1:58 AM     	 [ Function modulation and Message contents ] 
 # Next Edit       : 10 Aug 2024, 4:50 PM       	 [ Auto Login Feature : Pendrive ]
-# Next Edit	  	  : 17 Aug 2024, 20:58 PM 	     [ Auto login features : Bluetooth, Wifi ]
+# Next Edit	  : 17 Aug 2024, 20:58 PM        [ Auto login features : Bluetooth, Wifi ]
 # Last Edit       : 18 Aug 2024, 15:59 PM        [ Auto Lock feature using background excecutable program ]
 
 # Description     : This is a Shell script that ensure a locking features on oppening of a terminal window. While opening 
