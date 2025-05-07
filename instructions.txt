@@ -1,3 +1,0 @@
-1. First confirm all tools those will be needed for run askpass.sh file is already installed.
-2. Copy the file autoexecute.desktop to .config/autorun/ whis is located on home folder
-3. Besicaly it is build for Genome desktop OS and tested on Arch based Manjaro OS

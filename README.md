@@ -14,7 +14,7 @@ A secure and intelligent terminal login system with password protection and auto
 
 ## 🛠️ Requirements
 
-* Linux-based OS (e.g., Ubuntu, Debian, Arch)
+* Linux-based OS (e.g., Ubuntu, Manjaro Debian, Arch) Genome- Desktop based only
 * Shell : `bash`/`zsh`
 * `bluetoothctl`, `rfkill`, and `hciconfig` (for Bluetooth)
 * `nmcli` (for Wi-Fi)
