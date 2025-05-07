@@ -1,8 +1,5 @@
-Here’s a `README.md` file for your **Login to Terminal Program** project. This version is tailored for a GitHub or project repository, clearly explaining features, setup, usage, and contribution guidelines:
 
----
-
-# 🔐 Login to Terminal Program
+# 🔐 TerminalPasswd (Login to Terminal Window)
 
 A secure and intelligent terminal login system with password protection and automatic login capabilities using USB, Bluetooth, or Wi-Fi device detection.
 
@@ -18,19 +15,21 @@ A secure and intelligent terminal login system with password protection and auto
 ## 🛠️ Requirements
 
 * Linux-based OS (e.g., Ubuntu, Debian, Arch)
-* `bash` shell
+* `bash` shell/ `zsh` shell/
 * `bluetoothctl`, `rfkill`, and `hciconfig` (for Bluetooth)
 * `nmcli` (for Wi-Fi)
 * `udevadm` (for USB detection)
 * `systemd` (to set up the login service)
+* `git` (to clone the repository)
+* And make sure those listed commands are installed in your system: `md5sum, grep, cat, echo, tr, ffmpeg, ip, awk, read, cut, ps, iwlist, sleep, clear, trap, wc, chmod, ls, upower, pgrep, date, free, curl, mkdir git`
 
 ## 📦 Installation
 
 1. **Clone this repository**:
 
    ```bash
-   git clone https://github.com/yourusername/login-to-terminal.git
-   cd login-to-terminal
+   git clone git@github.com:Bibhas-Das/TerminalPasswd.git
+   cd TerminalPasswd
    ```
 
 2. **Configure Settings**:
