@@ -32,13 +32,14 @@ A secure and intelligent terminal login system with password protection and auto
    cd TerminalPasswd
    ```
 
-2. **Configure Settings**:
-
-   * Copy the file autoexecute.desktop to ~/.config/autorun/
+2  **Copy the file autoexecute.desktop to ~/.config/autorun/**
+   
    ```bash
       mkdir -p ~/.config/autorun && cp autoexecute.desktop ~/.config/autorun/ 
    ```
-   * Then just run the askpass.sh file
+   
+3  **Then just run the askpass.sh file**
+
    ```bash
       sudo chmod +x askpass.sh
       ./askpass.sh 
@@ -49,15 +50,21 @@ A secure and intelligent terminal login system with password protection and auto
 
 Or allow it to run on boot via systemd.
 
-## 📁 Directory Structure
+## 📁 Directory Structure after setup
 
 ```
-login-to-terminal/
-├── login-terminal.sh         # Main script
-├── config.sh                 # Configuration for trusted devices and password
-├── login-terminal.service    # Optional systemd unit
-├── logs/                     # Login logs
-└── README.md                 # Project documentation
+~/
+ ├──.TerminalSecurity
+ |    ├──login_attempts.log
+ |    ├──*.png
+ |    └──*.mp4
+ ├──.password_hashes.csv
+ ├──.Secrect
+ |    ├── commands
+ |    └── notes
+ ├──.askpass
+ └──.autolock
+
 ```
 
 ## 🛡️ Security Notice
