@@ -74,8 +74,8 @@ A secure and intelligent terminal login system with password protection and auto
 
 * While convenient, auto-login methods (USB, Bluetooth, Wi-Fi) reduce security and should be used with caution in sensitive environments. Always have a fallback password login enabled.
 
-* If Trusted device is removed The system will be automaticly lock
-* Store all logs, In case of lock It also captures the image and short video for thread indentification
+* If Trusted device will remove, the system will be automaticly locked
+* It stores all logs, In case of lock It also captures the image and short video for thread indentification
 
 
 ## 🧑‍💻 Contributing
