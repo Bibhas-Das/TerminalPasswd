@@ -15,7 +15,7 @@ A secure and intelligent terminal login system with password protection and auto
 ## 🛠️ Requirements
 
 * Linux-based OS (e.g., Ubuntu, Debian, Arch)
-* `bash` shell/ `zsh` shell/
+* Shell : `bash`/`zsh`
 * `bluetoothctl`, `rfkill`, and `hciconfig` (for Bluetooth)
 * `nmcli` (for Wi-Fi)
 * `udevadm` (for USB detection)
@@ -34,27 +34,18 @@ A secure and intelligent terminal login system with password protection and auto
 
 2. **Configure Settings**:
 
-   * Edit `config.sh` to set your trusted devices (USB ID, Bluetooth MAC, or Wi-Fi SSID).
-   * Set your secure login password in the configuration.
-
-3. **Install Service (Optional)**:
-
-   * To run this on boot, create a `systemd` service:
-
-     ```bash
-     sudo cp login-terminal.service /etc/systemd/system/
-     sudo systemctl daemon-reexec
-     sudo systemctl enable login-terminal.service
-     sudo systemctl start login-terminal.service
-     ```
+   * Copy the file autoexecute.desktop to ~/.config/autorun/
+   ```bash
+      mkdir -p ~/.config/autorun && cp autoexecute.desktop ~/.config/autorun/ 
+   ```
+   * Then just run the askpass.sh file
+   ```bash
+      sudo chmod +x askpass.sh
+      ./askpass.sh 
+   ```
 
 ## ⚙️ Usage
 
-Run the program manually:
-
-```bash
-./login-terminal.sh
-```
 
 Or allow it to run on boot via systemd.
 
@@ -68,14 +59,6 @@ login-to-terminal/
 ├── logs/                     # Login logs
 └── README.md                 # Project documentation
 ```
-
-## 🧩 Customization
-
-You can modify `login-terminal.sh` to:
-
-* Add new authentication modes (e.g., NFC, voiceprint)
-* Change logging behavior
-* Customize prompts and visuals
 
 ## 🛡️ Security Notice
 
@@ -110,5 +93,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 ---
-
-Would you like this saved as a file or want a version with GitHub-specific badges and links?
