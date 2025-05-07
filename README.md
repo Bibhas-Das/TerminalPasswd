@@ -28,24 +28,26 @@ A secure and intelligent terminal login system with password protection and auto
 1. **Clone this repository**:
 
    ```bash
-   git clone git@github.com:Bibhas-Das/TerminalPasswd.git
+   git clone https://github.com/Bibhas-Das/TerminalPasswd.git
    cd TerminalPasswd
    ```
 
-2.  **Copy the file autoexecute.desktop to ~/.config/autorun/**:
+2. **Copy the file autoexecute.desktop to ~/.config/autorun/**:
    
    ```bash
-      mkdir -p ~/.config/autorun && cp autoexecute.desktop ~/.config/autorun/ 
+    mkdir -p ~/.config/autorun && cp autoexecute.desktop ~/.config/autorun/ 
    ```
    
-3.  **Then just run the askpass.sh file**:
+3. **Then just run the askpass.sh file**:
 
    ```bash
-      sudo chmod +x askpass.sh
-      ./askpass.sh 
+    sudo chmod +x askpass.sh
+    ./askpass.sh 
    ```
 
 ## ⚙️ Usage
+
+  ![Screenshot of the program](images/image1.png)
 
 
 Or allow it to run on boot via systemd.
