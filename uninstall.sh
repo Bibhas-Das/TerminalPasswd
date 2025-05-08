@@ -114,6 +114,8 @@ crean_footprint()
 
 message "[ TerminalPassword ]" "brown"
 echo 
+message "Make use you did not change any file or folder name. If you renamed any file then this uninstall program will fail" "purple"
+echo 
 message "Are you sure to uninstall (yes/no): " "blue"
 read ch
 if test "$ch" = "yes"
