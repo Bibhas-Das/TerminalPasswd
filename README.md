@@ -41,8 +41,8 @@ A secure and intelligent terminal login system with password protection and auto
 3. **Then just run the askpass.sh file**:
 
    ```bash
-    sudo chmod +x askpass.sh
-    ./askpass.sh 
+   sudo chmod +x askpass.sh
+   ./askpass.sh 
    ```
 
 ## ⚙️ Usage
@@ -52,6 +52,12 @@ A secure and intelligent terminal login system with password protection and auto
 
  * Here You can easily add your trusted Pendrive, Wifi , Bluetooth deivces for auto-login
  * Or use password to login 
+ * Then just run 
+
+ ```bash
+ commands
+ ```
+ * Here all external commands you can use now. For more compatibility add blackarch database to your system.
  
 ## 📁 Directory Structure after setup
 
