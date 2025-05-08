@@ -77,6 +77,14 @@ A secure and intelligent terminal login system with password protection and auto
 * If Trusted device will remove, the system will be automaticly locked
 * It stores all logs, In case of lock It also captures the image and short video for thread indentification
 
+## 🗑️ Uninstall
+   
+   * To uninstall form your device just go to the downloaded folder or redownload the repo and inside the folder uninstall.sh file is there just run it
+
+   ```bash
+   sh uninstall.sh
+   ```
+
 
 ## 🧑‍💻 Contributing
 
